@@ -16,6 +16,7 @@ public class ConnectionHelper {
         database="dbAppSekretariatDataSet";\
         uname="sa";
         pass="123";
+        port="1443";
 
         StrictMode.ThreadPolicy policy= new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
