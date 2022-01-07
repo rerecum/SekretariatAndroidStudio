@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             connect = connectionHelper.connectionclass();
             if(connect!=null)
             {
-                String query = "Select * from tblGrid_Sekretariat";
+                String query = "Select * from tblGrid_Sekretariat Where id='1'";
                 Statement st = connect.createStatement();
                 ResultSet rs = st.executeQuery(query);
 
@@ -39,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
                     tx1.setText(rs.getString(1));
                     tx2.setText(rs.getString(2));
                 }
+            }
+            else
+            {
+                ConnectionResult = "Check Connection";
             }
         }
         catch(Exception ex)
